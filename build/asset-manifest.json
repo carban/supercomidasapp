@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.da413cb3.chunk.css",
+    "main.js": "/static/js/main.e719dd0b.chunk.js",
+    "main.js.map": "/static/js/main.e719dd0b.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.151d002d.chunk.css": "/static/css/2.151d002d.chunk.css",
+    "static/js/2.a5fd3dd6.chunk.js": "/static/js/2.a5fd3dd6.chunk.js",
+    "static/js/2.a5fd3dd6.chunk.js.map": "/static/js/2.a5fd3dd6.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.da1a8fc4856375fe50c0944b172b24f4.js": "/precache-manifest.da1a8fc4856375fe50c0944b172b24f4.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.151d002d.chunk.css.map": "/static/css/2.151d002d.chunk.css.map",
+    "static/css/main.da413cb3.chunk.css.map": "/static/css/main.da413cb3.chunk.css.map",
+    "static/media/count.png": "/static/media/count.8482c9cf.png",
+    "static/media/countInactive.png": "/static/media/countInactive.8d299c8b.png",
+    "static/media/england_icon.png": "/static/media/england_icon.e2132738.png",
+    "static/media/logo.png": "/static/media/logo.c258a6df.png",
+    "static/media/marker.png": "/static/media/marker.ef1b6018.png",
+    "static/media/paper-dashboard.min.css": "/static/media/nucleo-icons.f32ed5ad.eot",
+    "static/media/paper-dashboard.css.map": "/static/media/paper-dashboard.css.9fac5d77.map",
+    "static/media/portuguese_icon.png": "/static/media/portuguese_icon.7e3f9114.png",
+    "static/media/spain_icon.png": "/static/media/spain_icon.9c933e20.png",
+    "static/media/tesla.png": "/static/media/tesla.d0ee1500.png"
+  }
+}
