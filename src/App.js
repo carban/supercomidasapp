@@ -5,7 +5,9 @@ import { Router, Route, Switch, Redirect } from "react-router-dom";
 import DashLayout from "layouts/DashLayout.jsx";
 import Start from "views/Start.jsx";
 import Login from "components/login/Login.jsx";
-import GetBill from "components/GetBill.jsx";
+// import GetBill from "components/GetBill.jsx";
+import BuyPlan from "components/BuyPlan.jsx";
+
 
 import routesAdmin from "routes/adminRoutes.js";
 import routesOperator from "routes/operatorRoutes.js";
@@ -28,7 +30,7 @@ function App() {
                 <Switch>
                     <Route exact path="/" component={Start} />
                     <ProtectedLoginRoute exact path="/login" component={Login} />
-                    <Route exact path="/getBill" component={GetBill} />
+                    <Route exact path="/buy_plan/:plan" component={BuyPlan} />
 
                     <ProtectedRoute path="/admin" userType="admin" render={props => <DashLayout {...props} routes={routesAdmin} loggedInBtn={true} />} />
                     <ProtectedRoute path="/operator" userType="operator" render={props => <DashLayout {...props} routes={routesOperator} loggedInBtn={true} />} />

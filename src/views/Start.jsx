@@ -16,12 +16,14 @@ import portuguese from "../langs/portuguese.js";
 
 // import bot_gif from "./bot_gif.gif";
 
+import { Link } from "react-router-dom";
+
 import { connect } from "react-redux";
 
 import {
     Table, Container,
     Card, CardBody,
-    CardTitle, Button
+    CardTitle
 } from "reactstrap";
 
 counterpart.registerTranslations('en', english);
@@ -29,7 +31,7 @@ counterpart.registerTranslations('es', spanish);
 counterpart.registerTranslations('po', portuguese);
 
 
-// counterpart.setLocale('en');
+counterpart.setLocale('en');
 
 // const NewComp = ({ store_name, setName }) => {
 
@@ -81,6 +83,8 @@ class Start extends React.Component {
     closeChat = () => {
         this.setState({ visibleChat: false });
     }
+
+
 
     render() {
         return (
@@ -231,14 +235,18 @@ class Start extends React.Component {
                                     <tr>
                                         <td></td>
                                         <td>
-                                            <Button color="success">Comprar</Button>
+                                            <span className="btn btn-success">
+                                                <Link to="/buy_plan/basico" style={{ "color": "white" }}>Comprar</Link>
+                                            </span>
                                         </td>
                                         <td>
-                                            <Button color="success">Comprar</Button>
-                                        </td>
+                                            <span className="btn btn-success">
+                                                <Link to="/buy_plan/normal" style={{ "color": "white" }}>Comprar</Link>
+                                            </span>                                        </td>
                                         <td>
-                                            <Button color="success">Comprar</Button>
-                                        </td>
+                                            <span className="btn btn-success">
+                                                <Link to="/buy_plan/premium" style={{ "color": "white" }}>Comprar</Link>
+                                            </span>                                        </td>
                                     </tr>
                                 </tbody>
                             </Table>
@@ -257,7 +265,7 @@ class Start extends React.Component {
                         <Tr content="home.download" component="div" />
                     </Link>
                 </center> */}
-            </div>
+            </div >
         )
     }
 }
