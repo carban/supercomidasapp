@@ -154,6 +154,9 @@ class Header extends React.Component {
             navbar
             className="justify-content-end"
           >
+            <h6>
+              {this.props.language}
+            </h6>
             {/* <form>
               <InputGroup className="no-border">
                 <Input placeholder="Search..." />
@@ -228,7 +231,7 @@ class Header extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({})
+const mapStateToProps = state => ({ language: state.language });
 
 const mapDispatchToProps = dispatch => ({
   changeLng(lan) {

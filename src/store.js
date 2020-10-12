@@ -1,7 +1,8 @@
 import {createStore} from "redux";
 
 const initialState = {
-    language: 'es'
+    language: 'es',
+    name: 'Pirlo',
 }
 
 const reducerLang = (state = initialState, action) => {
@@ -9,6 +10,11 @@ const reducerLang = (state = initialState, action) => {
         return {
             ...state,
             language: action.language
+        }
+    } else if (action.type === "CHANGE_NAME") {
+        return {
+            ...state,
+            name: action.name
         }
     }
     return state;

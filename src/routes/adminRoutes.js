@@ -5,15 +5,15 @@ import TransformersMap from "views/admin/TransformersMap.jsx";
 var adminRoutes = [
   {
     path: "/createUser",
-    name: "createUser",
+    name: "Crear Digitador",
     icon: "nc-icon nc-diamond",
     component: CreateUser,
     layout: "/admin"
   },
   {
     path: "/getUser",
-    name: "getUser",
-    icon: "nc-icon nc-pin-3",
+    name: "Lista de Digitadores",
+    icon: "nc-icon nc-badge",
     component: GetUser,
     layout: "/admin"
   },

@@ -1,4 +1,7 @@
-import React from "react";
+import React
+    // ,{ useState, useEffect }
+    from "react";
+
 import DemoNavbar from "components/Navbars/DemoNavbar.jsx";
 // import ChatBot from "components/chatBot/ChatBot.jsx";
 
@@ -28,6 +31,41 @@ counterpart.registerTranslations('po', portuguese);
 
 // counterpart.setLocale('en');
 
+// const NewComp = ({ store_name, setName }) => {
+
+//     const initialState = {
+//         name: "test",
+//         value: 0
+//     }
+
+//     const [values, setValues] = useState(initialState);
+
+//     useEffect(() => {
+//         console.log("Working...");
+//     })
+
+//     const handler = e => {
+//         e.preventDefault();
+//         const { name, value } = e.target;
+//         setValues({ ...values, [name]: value });
+//     }
+
+//     const add1 = () => {
+//         setValues({ ...values, value: values.value + 1 })
+//     }
+
+//     return (
+//         <div>
+//             <input type="text" onChange={handler} name="name"></input>
+//             <button onClick={add1}>Add 1</button>
+//             <button onClick={() => setName(values.name)}>SAVE NAME</button>
+//             <h4>{values.name}</h4>
+//             <h4>{values.value}</h4>
+//             <h4>{store_name}</h4>
+//         </div>
+//     )
+// }
+
 class Start extends React.Component {
     constructor(props) {
         super(props);
@@ -50,6 +88,7 @@ class Start extends React.Component {
                 <DemoNavbar {...this.props} />
                 <div className="contentStart">
                     <center>
+                        {/* <NewComp {...this.props} /> */}
                         {/* <Tr content="home.title" component="h1" /> */}
                         <h1>
                             ¡Tu restaurante facil y rapido!
@@ -130,61 +169,61 @@ class Start extends React.Component {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td style={{textAlign: "left"}}>Gestion de clientes</td>
+                                        <td style={{ textAlign: "left" }}>Gestion de clientes</td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                     </tr>
                                     <tr>
-                                        <td style={{textAlign: "left"}}>Gestion de productos</td>
+                                        <td style={{ textAlign: "left" }}>Gestion de productos</td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                     </tr>
                                     <tr>
-                                        <td style={{textAlign: "left"}}>Gestion de pagos</td>
+                                        <td style={{ textAlign: "left" }}>Gestion de pagos</td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                     </tr>
                                     <tr>
-                                        <td style={{textAlign: "left"}}>Reportes graficos</td>
+                                        <td style={{ textAlign: "left" }}>Reportes graficos</td>
                                         <td><span role="img" aria-label=".">❌</span></td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                     </tr>
                                     <tr>
-                                        <td style={{textAlign: "left"}}>Reportes de ventas</td>
+                                        <td style={{ textAlign: "left" }}>Reportes de ventas</td>
                                         <td><span role="img" aria-label=".">❌</span></td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                     </tr>
                                     <tr>
-                                        <td style={{textAlign: "left"}}>Actualizar datos de los menús de comidas desde un archivo en excel.</td>
+                                        <td style={{ textAlign: "left" }}>Actualizar datos de los menús de comidas desde un archivo en excel.</td>
                                         <td><span role="img" aria-label=".">❌</span></td>
                                         <td><span role="img" aria-label=".">❌</span></td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                     </tr>
                                     <tr>
-                                        <td style={{textAlign: "left"}}>Generar Mapas de ubicación de clientes</td>
+                                        <td style={{ textAlign: "left" }}>Generar Mapas de ubicación de clientes</td>
                                         <td><span role="img" aria-label=".">❌</span></td>
                                         <td><span role="img" aria-label=".">❌</span></td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                     </tr>
                                     <tr>
-                                        <td style={{textAlign: "left"}}>Personalizacion</td>
+                                        <td style={{ textAlign: "left" }}>Personalizacion</td>
                                         <td><span role="img" aria-label=".">❌</span></td>
                                         <td><span role="img" aria-label=".">❌</span></td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                     </tr>
                                     <tr>
-                                        <td style={{textAlign: "left"}}>PWA</td>
+                                        <td style={{ textAlign: "left" }}>PWA</td>
                                         <td><span role="img" aria-label=".">❌</span></td>
                                         <td><span role="img" aria-label=".">❌</span></td>
                                         <td><span role="img" aria-label=".">✅</span></td>
                                     </tr>
                                     <tr>
-                                        <td style={{textAlign: "left"}}>Bot</td>
+                                        <td style={{ textAlign: "left" }}>Bot</td>
                                         <td><span role="img" aria-label=".">❌</span></td>
                                         <td><span role="img" aria-label=".">❌</span></td>
                                         <td><span role="img" aria-label=".">✅</span></td>
@@ -225,9 +264,24 @@ class Start extends React.Component {
 
 const mapStateToProps = state => {
     counterpart.setLocale(state.language);
-    return { lng: state.language }
+    return { lng: state.language, store_name: state.name }
 }
 
-const mapDispatchToProps = dispatch => ({});
+
+// function mapDispatchToProps(dispatch) {
+//     return {
+//       addArticle: (article) => dispatch(addArticle(article)),        
+//     };
+//   }
+
+const mapDispatchToProps = dispatch => ({
+    // setName: name => dispatch(setName(name))
+    setName(name) {
+        dispatch({
+            type: "CHANGE_NAME",
+            name: name
+        })
+    }
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Start);

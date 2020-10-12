@@ -34,7 +34,7 @@ class DashLayout extends React.Component {
     super(props);
     this.state = {
       backgroundColor: "green",
-      activeColor: "warning"
+      activeColor: "info"
     };
     this.mainPanel = React.createRef();
   }
@@ -74,13 +74,24 @@ class DashLayout extends React.Component {
     }
   }
 
+  getBackgroundColor = () => {
+    const la = this.props.routes[0].layout;
+    if (la === "/admin") {
+      return "green";
+    }else if(la === "/operator"){
+      return "yellow";
+    }else{
+      return "blue";
+    }
+  }
+
   render() {
     return (
       <div className="wrapper animated fadeIn slow">
         <Sidebar
           {...this.props}
           routes={this.props.routes}
-          bgColor={this.state.backgroundColor}
+          bgColor={this.getBackgroundColor()}
           activeColor={this.getActiveColor()}
         />
         <div className="main-panel animated zoomInDown" ref={this.mainPanel}>

@@ -89,35 +89,35 @@ class GetUser extends React.Component {
 
     render() {
 
-        const trans = (tipo) => {
-            if (tipo === 'operador') {
-                return counterpart.translate('createUser.operator');
-            } else {
-                return counterpart.translate('createUser.manager');
-            }
-        }
+        // const trans = (tipo) => {
+        //     if (tipo === 'operador') {
+        //         return counterpart.translate('createUser.operator');
+        //     } else {
+        //         return counterpart.translate('createUser.manager');
+        //     }
+        // }
 
-        var filteredPeople = [];
+        // var filteredPeople = [];
 
-        if (this.state.selected !== counterpart.translate('getUser.all')) {
-            //Filtrar por ambas formas al tiempo
-            filteredPeople = this.state.persons.filter(p => (
-                trans(p.user_type).toLowerCase() === this.state.selected.toLowerCase() &&
-                p.email.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1
-            ));
-        } else { //Filtrar solo por busqueda
-            filteredPeople = this.state.persons.filter(p => (
-                p.email.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1
-            ));
-        }
+        // if (this.state.selected !== counterpart.translate('getUser.all')) {
+        //     //Filtrar por ambas formas al tiempo
+        //     filteredPeople = this.state.persons.filter(p => (
+        //         trans(p.user_type).toLowerCase() === this.state.selected.toLowerCase() &&
+        //         p.email.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1
+        //     ));
+        // } else { //Filtrar solo por busqueda
+        //     filteredPeople = this.state.persons.filter(p => (
+        //         p.email.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1
+        //     ));
+        // }
 
-        const people = filteredPeople.map((p, k) => (
+        const people = this.state.persons.map((p, k) => (
             <tr key={k}>
                 <th scope="row">#{k + 1}</th>
                 <th>{p.name}</th>
                 <th>{p.id_user}</th>
                 <th>{p.email}</th>
-                <th>{trans(p.user_type)}</th>
+                {/* <th>{p.user_type}</th> */}
                 <th>
                     <Button color="success" onClick={() => this.openToggle(p)}>
                         <i className="nc-icon nc-zoom-split" />
@@ -158,7 +158,8 @@ class GetUser extends React.Component {
                                                 <th><Tr content="clientForm.name" /></th>
                                                 <th>ID</th>
                                                 <th>Email</th>
-                                                <th><Tr content="clientForm.type" /></th>
+                                                <th>Consultar</th>
+                                                {/* <th><Tr content="clientForm.type" /></th> */}
                                             </tr>
                                         </thead>
                                         <tbody>
